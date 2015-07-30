@@ -144,7 +144,7 @@ describe( 'distributions-binomial-quantile', function tests() {
 			for ( var i = 0; i < data.length; i++ ) {
 				actual =  quantile( data[ i ], {
 					'n': validationData.n,
-			'p ': validationData.p 
+					'p': validationData.p
 				});
 				if ( isFiniteNumber( actual ) && isFiniteNumber( expected[ i ] ) ) {
 					assert.closeTo( actual, expected[ i ] , 1e-12 );
@@ -174,7 +174,7 @@ describe( 'distributions-binomial-quantile', function tests() {
 
 		actual = quantile( data, {
 			'n': validationData.n,
-			'p ': validationData.p 
+			'p': validationData.p
 		});
 		assert.notEqual( actual, data );
 
@@ -187,7 +187,7 @@ describe( 'distributions-binomial-quantile', function tests() {
 		actual = quantile( data, {
 			'copy': false,
 			'n': validationData.n,
-			'p ': validationData.p 
+			'p': validationData.p
 		});
 		assert.strictEqual( actual, data );
 
@@ -219,7 +219,7 @@ describe( 'distributions-binomial-quantile', function tests() {
 
 		actual = quantile( data, {
 			'n': validationData.n,
-			'p ': validationData.p 
+			'p': validationData.p
 		});
 		assert.notEqual( actual, data );
 
@@ -233,7 +233,7 @@ describe( 'distributions-binomial-quantile', function tests() {
 		actual = quantile( data, {
 			'copy': false,
 			'n': validationData.n,
-			'p ': validationData.p 
+			'p': validationData.p
 		});
 		expected = new Float32Array( validationData.expected.map( function( d ) {
 			if (d === 'Inf' ) {
@@ -275,7 +275,7 @@ describe( 'distributions-binomial-quantile', function tests() {
 		actual = quantile( data, {
 			'dtype': 'float32',
 			'n': validationData.n,
-			'p ': validationData.p 
+			'p': validationData.p
 		});
 
 		assert.notEqual( actual, data );
@@ -312,7 +312,7 @@ describe( 'distributions-binomial-quantile', function tests() {
 		actual = quantile( data, {
 			'accessor': getValue,
 			'n': validationData.n,
-			'p ': validationData.p 
+			'p': validationData.p
 		});
 		assert.notEqual( actual, data );
 
@@ -327,7 +327,7 @@ describe( 'distributions-binomial-quantile', function tests() {
 			'accessor': getValue,
 			'copy': false,
 			'n': validationData.n,
-			'p ': validationData.p 
+			'p ': validationData.p
 		});
 		assert.strictEqual( actual, data );
 
@@ -356,7 +356,7 @@ describe( 'distributions-binomial-quantile', function tests() {
 		actual = quantile( data, {
 			'path': 'x.1',
 			'n': validationData.n,
-			'p ': validationData.p 
+			'p': validationData.p
 		});
 
 		expected = validationData.expected
@@ -389,7 +389,7 @@ describe( 'distributions-binomial-quantile', function tests() {
 			'path': 'x/1',
 			'sep': '/',
 			'n': validationData.n,
-			'p ': validationData.p 
+			'p': validationData.p
 		});
 		assert.strictEqual( actual, data );
 
@@ -422,7 +422,7 @@ describe( 'distributions-binomial-quantile', function tests() {
 		mat = matrix( d1, [5,5], 'float64' );
 		out = quantile( mat, {
 			'n': validationData.n,
-			'p ': validationData.p 
+			'p': validationData.p
 		});
 
 		for ( i = 0; i < out.length; i++ ) {
@@ -435,7 +435,7 @@ describe( 'distributions-binomial-quantile', function tests() {
 		out = quantile( mat, {
 			'copy': false,
 			'n': validationData.n,
-			'p ': validationData.p 
+			'p': validationData.p
 		});
 		assert.strictEqual( mat, out );
 
@@ -469,7 +469,7 @@ describe( 'distributions-binomial-quantile', function tests() {
 		out = quantile( mat, {
 			'dtype': 'float32',
 			'n': validationData.n,
-			'p ': validationData.p 
+			'p': validationData.p
 		});
 
 		assert.strictEqual( out.dtype, 'float32' );

@@ -1,8 +1,8 @@
 options( digits = 16 )
 library( jsonlite )
 
-n = 1
-p  = 0.5
+n = 30
+p  = 0.02
 probs = 0:24 / 25
 y = qbinom( probs, n, p  )
 

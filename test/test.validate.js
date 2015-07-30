@@ -63,7 +63,7 @@ describe( 'validate', function tests() {
 			assert.isTrue( err instanceof TypeError );
 		}
 	});
-it( 'should return an error if provided a `p ` parameter which is not a positive number', function test() {
+it( 'should return an error if provided a `p` parameter which is not a number in (0,1]', function test() {
 		var values, err;
 		 values = [
 			-2,
@@ -80,7 +80,7 @@ it( 'should return an error if provided a `p ` parameter which is not a positive
 
 		for ( var i = 0; i < values.length; i++ ) {
 			err = validate( {}, {
-				'p ': values[ i ]
+				'p': values[ i ]
 			});
 			assert.isTrue( err instanceof TypeError );
 		}
