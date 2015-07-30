@@ -4,14 +4,14 @@ Quantile Function
 
 > [Binomial](https://en.wikipedia.org/wiki/Binomial_distribution) distribution [quantile function](https://en.wikipedia.org/wiki/Quantile_function).
 
-The [quantile function](https://en.wikipedia.org/wiki/Quantile_function) for a [Binomial](https://en.wikipedia.org/wiki/Binomial_distribution) random variable is
+The [quantile function](https://en.wikipedia.org/wiki/Quantile_function) for a [Binomial](https://en.wikipedia.org/wiki/Binomial_distribution) random variable returns for any `p` satisfying `0 <= p < 1` the value `x` for which
 
-<div class="equation" align="center" data-raw-text="" data-equation="eq:quantile_function">
-	<img src="" alt="Quantile function for a Binomial distribution.">
+<div class="equation" align="center" data-raw-text="F(x-1;n,p) < p \le F(x;n,p)" data-equation="eq:quantile_function">
+	<img src="https://cdn.rawgit.com/distributions-io/binomial-quantile/e5f52c65faab798c7bd80bffeb72740d6f3a5df5/docs/img/eqn.svg" alt="Quantile value for a Binomial distribution.">
 	<br>
 </div>
 
-for `0 <= p < 1`, where `n` is the number of trials and `p ` is the success probability.
+holds, where `F` is the cumulative distribution function (CDF) of a Binomial random variables with parameters `n` and `p`, where `n` is the number of trials and `p ` is the success probability.
 
 ## Installation
 
@@ -40,15 +40,15 @@ var matrix = require( 'dstructs-matrix' ),
 	i;
 
 out = quantile( 0.25 );
-// returns
+// returns 0
 
 x = [ 0, 0.2, 0.4, 0.6, 0.8, 1 ];
 out = quantile( x );
-// returns [...]
+// returns [ 0, 0, 0, 1, 1, 1 ]
 
 x = new Float32Array( x );
 out = quantile( x );
-// returns Float64Array( [...] )
+// returns Float64Array( [0,0,0,1,1,1] )
 
 x = new Float32Array( 6 );
 for ( i = 0; i < 6; i++ ) {
@@ -63,9 +63,9 @@ mat = matrix( x, [3,2], 'float32' );
 
 out = quantile( mat );
 /*
-	[
-
-	   ]
+	[ 0 0
+	  0 0
+	  1 1 ]
 */
 ```
 
@@ -86,9 +86,9 @@ var x = [ 0, 0.2, 0.4, 0.6, 0.8, 1 ];
 
 var out = quantile( x, {
 	'n': 4,
-	'p ': 8
+	'p ': 0.8
 });
-// returns [...]
+// returns [ 0, 3, 3, 4, 4, 4 ]
 ```
 
 For non-numeric `arrays`, provide an accessor `function` for accessing `array` values.
@@ -110,7 +110,7 @@ function getValue( d, i ) {
 var out = quantile( data, {
 	'accessor': getValue
 });
-// returns [...]
+// returns [ 0, 0, 0, 1, 1, 1 ]
 ```
 
 
@@ -132,12 +132,12 @@ var out = quantile( data, {
 });
 /*
 	[
-		{'x':[0,]},
-		{'x':[1,]},
-		{'x':[2,]},
-		{'x':[3,]},
-		{'x':[4,]},
-		{'x':[5,]}
+		{'x':[0,0]},
+		{'x':[1,0]},
+		{'x':[2,0]},
+		{'x':[3,1]},
+		{'x':[4,1]},
+		{'x':[5,1]}
 	]
 */
 
@@ -155,13 +155,13 @@ x = new Float32Array( [0.2,0.4,0.6,0.8] );
 out = quantile( x, {
 	'dtype': 'int32'
 });
-// returns Int32Array( [...] )
+// returns Int32Array( [0,0,1,1] )
 
 // Works for plain arrays, as well...
 out = quantile( [0.2,0.4,0.6,0.8], {
 	'dtype': 'uint8'
 });
-// returns Uint8Array( [...] )
+// returns Uint8Array( [0,0,1,1] )
 ```
 
 By default, the function returns a new data structure. To mutate the input data structure (e.g., when input values can be discarded or when optimizing memory usage), set the `copy` option to `false`.
@@ -178,7 +178,7 @@ x = [ 0, 0.2, 0.4, 0.6, 0.8, 1 ];
 out = quantile( x, {
 	'copy': false
 });
-// returns [...]
+// returns [ 0, 0, 0, 1, 1, 1 ]
 
 bool = ( x === out );
 // returns true
@@ -198,9 +198,9 @@ out = quantile( mat, {
 	'copy': false
 });
 /*
-	[
-
-	   ]
+	[ 0 0
+	  0 0
+	  1 1 ]
 */
 
 bool = ( mat === out );
