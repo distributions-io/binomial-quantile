@@ -4,10 +4,10 @@ Quantile Function
 
 > [Binomial](https://en.wikipedia.org/wiki/Binomial_distribution) distribution [quantile function](https://en.wikipedia.org/wiki/Quantile_function).
 
-The [quantile function](https://en.wikipedia.org/wiki/Quantile_function) for a [Binomial](https://en.wikipedia.org/wiki/Binomial_distribution) random variable returns for any `p` satisfying `0 <= p < 1` the value `x` for which
+The [quantile function](https://en.wikipedia.org/wiki/Quantile_function) for a [Binomial](https://en.wikipedia.org/wiki/Binomial_distribution) random variable returns for any `k` satisfying `0 <= k <= 1` the value `x` for which
 
-<div class="equation" align="center" data-raw-text="F(x-1;n,p) < p \le F(x;n,p)" data-equation="eq:quantile_function">
-	<img src="https://cdn.rawgit.com/distributions-io/binomial-quantile/e5f52c65faab798c7bd80bffeb72740d6f3a5df5/docs/img/eqn.svg" alt="Quantile value for a Binomial distribution.">
+<div class="equation" align="center" data-raw-text="F(x-1;n,p) < k \le F(x;n,p)" data-equation="eq:quantile_function">
+	<img src="https://cdn.rawgit.com/distributions-io/binomial-quantile/14705dd5d71e255ca32b0453a661a3899cf7b565/docs/img/eqn.svg" alt="Quantile value for a Binomial distribution.">
 	<br>
 </div>
 
