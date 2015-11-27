@@ -79,7 +79,7 @@ The function accepts the following `options`:
 *	__path__: [deepget](https://github.com/kgryte/utils-deep-get)/[deepset](https://github.com/kgryte/utils-deep-set) key path.
 *	__sep__: [deepget](https://github.com/kgryte/utils-deep-get)/[deepset](https://github.com/kgryte/utils-deep-set) key path separator. Default: `'.'`.
 
-A [Binomial](https://en.wikipedia.org/wiki/Binomial_distribution) distribution is a function of 2 parameter(s): `n`(number of trials) and `p `(success probability). By default, `n` is equal to `1` and `p ` is equal to `0.5`. To adjust either parameter, set the corresponding option(s).
+A [Binomial](https://en.wikipedia.org/wiki/Binomial_distribution) distribution is a function of two parameters: `n`(number of trials) and `0 <= p <= 1`(success probability). By default, `n` is equal to `1` and `p ` is equal to `0.5`. To adjust either parameter, set the corresponding option.
 
 ``` javascript
 var x = [ 0, 0.2, 0.4, 0.6, 0.8, 1 ];
