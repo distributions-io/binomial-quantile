@@ -20,7 +20,7 @@
   "main": "./lib",
   "repository": {
     "type": "git",
-    "url": "git://github.com/compute-io/binomial-quantile.git"
+    "url": "git://github.com/distributions-io/binomial-quantile.git"
   },
   "keywords": [
     "distributions.io",
@@ -29,14 +29,20 @@
     "statistics",
     "stats",
     "cdf",
-    "inverse"
+    "inverse",
+    "successes",
+    "independent trials",
+    "discrete",
+    "bernoulli",
+    "exponential family"
   ],
   "bugs": {
-    "url": "https://github.com/compute-io/binomial-quantile/issues"
+    "url": "https://github.com/distributions-io/binomial-quantile/issues"
   },
   "dependencies": {
     "compute-array-constructors": "^1.0.0",
     "compute-erfcinv": "^2.0.0",
+    "distributions-binomial-cdf": "0.0.0",
     "dstructs-matrix": "^2.0.0",
     "utils-deep-get": "^1.0.0",
     "utils-deep-set": "^1.0.1",
