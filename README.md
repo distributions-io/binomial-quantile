@@ -11,7 +11,7 @@ The [quantile function](https://en.wikipedia.org/wiki/Quantile_function) for a [
 	<br>
 </div>
 
-holds, where `F` is the cumulative distribution function (CDF) of a Binomial random variables with parameters `n` and `p`, where `n` is the number of trials and `p ` is the success probability.
+holds, where `F` is the cumulative distribution function (CDF) of a Binomial random variable with parameters `n` and `p`, where `n` is the number of trials and `p ` is the success probability.
 
 ## Installation
 
@@ -389,8 +389,8 @@ Copyright &copy; 2015. The [Compute.io](https://github.com/compute-io) Authors.
 [travis-image]: http://img.shields.io/travis/distributions-io/binomial-quantile/master.svg
 [travis-url]: https://travis-ci.org/distributions-io/binomial-quantile
 
-[codecov-image]: https://img.shields.io/codecov/github/distributions-io/binomial-quantile/master.svg
-[codecov-url]: https://coveralls.io/github/distributions-io/binomial-quantile?branch=master
+[codecov-image]: https://img.shields.io/codecov/c/github/distributions-io/binomial-quantile/master.svg
+[codecov-url]: https://codecov.io/github/distributions-io/binomial-quantile?branch=master
 
 [dependencies-image]: http://img.shields.io/david/distributions-io/binomial-quantile.svg
 [dependencies-url]: https://david-dm.org/distributions-io/binomial-quantile
