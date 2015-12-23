@@ -72,7 +72,7 @@ out = quantile( mat );
 The function accepts the following `options`:
 
 *	__n__: number of trials. Default: `1`.
-*	__p __: success probability. Default: `0.5`.
+*	__p__: success probability. Default: `0.5`.
 * 	__accessor__: accessor `function` for accessing `array` values.
 * 	__dtype__: output [`typed array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays) or [`matrix`](https://github.com/dstructs/matrix) data type. Default: `float64`.
 *	__copy__: `boolean` indicating if the `function` should return a new data structure. Default: `true`.
